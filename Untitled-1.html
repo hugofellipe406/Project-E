@@ -1,0 +1,34 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="body.css">
+  <title>Aceitas um encontro?</title>
+</head>
+<body>
+  <div style="text-align: center; margin-top: 30px;">
+    <h5><i>Aceitas um encontro?</i></h5>
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" 
+           alt="Cute GIF" width="500" height="450">
+
+      <div>
+          <button id="botao-sim" onclick="window.location.href='file:///C:/Users/hugof/OneDrive/%C3%81rea%20de%20Trabalho/Projeto%20E/Untitled-2.html';"> Sim</button>
+          <button id="botao-nao">Não</button>
+      </div>
+  </div>
+
+  <script>
+  const botaoNao = document.getElementById('botao-nao');
+  
+  botaoNao.addEventListener('mouseenter', () => {
+      const larguraJanela = window.innerWidth;
+      const alturaJanela = window.innerHeight;
+
+      const novaPosicaoX = Math.random() * (larguraJanela - botaoNao.offsetWidth);
+      const novaPosicaoY = Math.random() * (alturaJanela - botaoNao.offsetHeight);
+
+      botaoNao.style.position = 'absolute'; // Adicionar posição absoluta
+      botaoNao.style.left = `${novaPosicaoX}px`;
+      botaoNao.style.top = `${novaPosicaoY}px`;
+  });
+  </script>
+</body>
